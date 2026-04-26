@@ -141,29 +141,26 @@ export function Projects() {
           ))}
         </div>
 
-        {/* Freelance strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} transition={{ duration: 0.6 }}
-          className="mt-12 glass rounded-3xl p-6"
-        >
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-primary" style={{ boxShadow: "0 0 12px var(--neon)" }} />
-            <h3 className="text-lg font-semibold">Other freelance launches</h3>
-          </div>
-          <div className="grid gap-3 md:grid-cols-3">
-            {freelance.map((f) => (
-              <a key={f.title} href={f.url} target="_blank" rel="noreferrer"
-                 className="glass group flex items-center justify-between rounded-2xl p-4 transition-transform hover:-translate-y-1">
-                <div>
-                  <div className="font-semibold">{f.title}</div>
-                  <div className="text-xs text-muted-foreground">{f.desc}</div>
-                </div>
-                <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-primary" />
-              </a>
-            ))}
-          </div>
-        </motion.div>
+        {freelance.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} transition={{ duration: 0.6 }}
+            className="mt-12 glass rounded-3xl p-6"
+          >
+            <div className="grid gap-3 md:grid-cols-3">
+              {freelance.map((f) => (
+                <a key={f.title} href={f.url} target="_blank" rel="noreferrer"
+                   className="glass group flex items-center justify-between rounded-2xl p-4 transition-transform hover:-translate-y-1">
+                  <div>
+                    <div className="font-semibold">{f.title}</div>
+                    <div className="text-xs text-muted-foreground">{f.desc}</div>
+                  </div>
+                  <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-primary" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );
