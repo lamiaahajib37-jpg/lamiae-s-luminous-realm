@@ -1,8 +1,9 @@
 {
+    "framework": "vite",
     "rewrites": [
       {
-        "source": "/((?!api/|static/|favicon.ico).*)",
-        "destination": "/index.html"
+        "source": "/(.*)",
+        "destination": "/"
       }
     ]
   }
