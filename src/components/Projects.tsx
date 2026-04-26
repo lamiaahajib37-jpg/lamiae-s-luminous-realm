@@ -7,6 +7,9 @@ import portail from "@/assets/project-uits-portail.png";
 import admin from "@/assets/project-uits-admin.jpg";
 import pro from "@/assets/project-uits-pro.jpg";
 import access from "@/assets/project-access-morocco.jpg";
+import icamBat from "@/assets/project-icam-bat.jpg";
+import vision360 from "@/assets/project-vision360.jpg";
+import faceup from "@/assets/project-faceup.jpg";
 
 const projects = [
   {
