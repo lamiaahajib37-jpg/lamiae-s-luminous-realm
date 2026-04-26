@@ -7,6 +7,9 @@ import portail from "@/assets/project-uits-portail.png";
 import admin from "@/assets/project-uits-admin.jpg";
 import pro from "@/assets/project-uits-pro.jpg";
 import access from "@/assets/project-access-morocco.jpg";
+import icamBat from "@/assets/project-icam-bat.jpg";
+import vision360 from "@/assets/project-vision360.jpg";
+import faceup from "@/assets/project-faceup.jpg";
 
 const projects = [
   {
@@ -57,13 +60,33 @@ const projects = [
     url: "https://access-morocco.vercel.app",
     img: access, locked: false,
   },
+  {
+    title: "ICAM-BAT",
+    tag: "Conference · EdTech",
+    desc: "International Conference on Advanced Materials & Batteries — Ben M'sik · UM6P.",
+    stack: ["WordPress", "Custom Theme", "PHP"],
+    url: "https://icam-bat.com",
+    img: icamBat, locked: false,
+  },
+  {
+    title: "Vision360",
+    tag: "Optical Store",
+    desc: "Elegant WordPress storefront for an optical brand — frames, lenses & booking.",
+    stack: ["WordPress", "WooCommerce", "Elementor"],
+    url: "https://vision360online.com",
+    img: vision360, locked: false,
+  },
+  {
+    title: "Faceup",
+    tag: "Beauty · E-commerce",
+    desc: "Premium Shopify storefront for a cosmetics brand — luxury beauty experience.",
+    stack: ["Shopify", "Liquid", "JS"],
+    url: "https://faceup.store",
+    img: faceup, locked: false,
+  },
 ];
 
-const freelance = [
-  { title: "ICAM-BAT", desc: "International Conference on Batteries (Ben M'sik · UM6P)", url: "https://icam-bat.com" },
-  { title: "Vision360", desc: "Optical store WordPress site", url: "https://vision360online.com" },
-  { title: "Faceup", desc: "Cosmetics Shopify storefront", url: "https://faceup.store" },
-];
+const freelance: { title: string; desc: string; url: string }[] = [];
 
 export function Projects() {
   return (
@@ -118,29 +141,26 @@ export function Projects() {
           ))}
         </div>
 
-        {/* Freelance strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} transition={{ duration: 0.6 }}
-          className="mt-12 glass rounded-3xl p-6"
-        >
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-primary" style={{ boxShadow: "0 0 12px var(--neon)" }} />
-            <h3 className="text-lg font-semibold">Other freelance launches</h3>
-          </div>
-          <div className="grid gap-3 md:grid-cols-3">
-            {freelance.map((f) => (
-              <a key={f.title} href={f.url} target="_blank" rel="noreferrer"
-                 className="glass group flex items-center justify-between rounded-2xl p-4 transition-transform hover:-translate-y-1">
-                <div>
-                  <div className="font-semibold">{f.title}</div>
-                  <div className="text-xs text-muted-foreground">{f.desc}</div>
-                </div>
-                <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-primary" />
-              </a>
-            ))}
-          </div>
-        </motion.div>
+        {freelance.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} transition={{ duration: 0.6 }}
+            className="mt-12 glass rounded-3xl p-6"
+          >
+            <div className="grid gap-3 md:grid-cols-3">
+              {freelance.map((f) => (
+                <a key={f.title} href={f.url} target="_blank" rel="noreferrer"
+                   className="glass group flex items-center justify-between rounded-2xl p-4 transition-transform hover:-translate-y-1">
+                  <div>
+                    <div className="font-semibold">{f.title}</div>
+                    <div className="text-xs text-muted-foreground">{f.desc}</div>
+                  </div>
+                  <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-primary" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );
