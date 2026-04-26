@@ -60,13 +60,33 @@ const projects = [
     url: "https://access-morocco.vercel.app",
     img: access, locked: false,
   },
+  {
+    title: "ICAM-BAT",
+    tag: "Conference · EdTech",
+    desc: "International Conference on Advanced Materials & Batteries — Ben M'sik · UM6P.",
+    stack: ["WordPress", "Custom Theme", "PHP"],
+    url: "https://icam-bat.com",
+    img: icamBat, locked: false,
+  },
+  {
+    title: "Vision360",
+    tag: "Optical Store",
+    desc: "Elegant WordPress storefront for an optical brand — frames, lenses & booking.",
+    stack: ["WordPress", "WooCommerce", "Elementor"],
+    url: "https://vision360online.com",
+    img: vision360, locked: false,
+  },
+  {
+    title: "Faceup",
+    tag: "Beauty · E-commerce",
+    desc: "Premium Shopify storefront for a cosmetics brand — luxury beauty experience.",
+    stack: ["Shopify", "Liquid", "JS"],
+    url: "https://faceup.store",
+    img: faceup, locked: false,
+  },
 ];
 
-const freelance = [
-  { title: "ICAM-BAT", desc: "International Conference on Batteries (Ben M'sik · UM6P)", url: "https://icam-bat.com" },
-  { title: "Vision360", desc: "Optical store WordPress site", url: "https://vision360online.com" },
-  { title: "Faceup", desc: "Cosmetics Shopify storefront", url: "https://faceup.store" },
-];
+const freelance: { title: string; desc: string; url: string }[] = [];
 
 export function Projects() {
   return (
