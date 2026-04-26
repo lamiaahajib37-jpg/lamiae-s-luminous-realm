@@ -5,8 +5,10 @@
   "type": "module",
  "scripts": {
   "dev": "vinxi dev",
-  "build": "vinxi build",
-  "start": "vinxi start"
+  "build": "node_modules/.bin/vinxi build",
+  "start": "vinxi start",
+  "lint": "eslint .",
+  "format": "prettier --write ."
 },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
