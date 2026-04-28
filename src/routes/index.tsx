@@ -9,18 +9,7 @@ import { Contact } from "@/components/Contact";
 
 export const Route = createFileRoute("/")({
   component: Index,
-  head: () => ({
-    meta: [
-      { title: "Lamiae Hajib — Lead IT Developer & Full-Stack Architect" },
-      {
-        name: "description",
-        content:
-          "Portfolio of Lamiae Hajib — Lead IT Developer & Full-Stack Architect specialised in Laravel, React, Node.js, ERP & SaaS systems. Available for freelance.",
-      },
-      { property: "og:title", content: "Lamiae Hajib — Full-Stack Architect" },
-      { property: "og:description", content: "Lead IT Developer with 2+ years building ERPs, portals & e-commerce." },
-    ],
-  }),
+  // ← hyyid head() kollha
 });
 
 function Index() {

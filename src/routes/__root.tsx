@@ -1,5 +1,5 @@
 import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
-import appCss from "../styles.css?url";
+import "../styles.css";  // ← haka bla ?url
 
 function NotFoundComponent() {
   return (

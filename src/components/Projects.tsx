@@ -16,7 +16,6 @@ const projects = [
     title: "UITS Management",
     tag: "Internal ERP",
     desc: "Internal management app — time tracking, tasks, leaves, missions, client follow-up.",
-    stack: ["Laravel", "React", "MySQL"],
     url: "https://uits-mgmt.ma",
     img: mgmt, locked: true,
   },
@@ -24,7 +23,7 @@ const projects = [
     title: "UCGS — Union Computers",
     tag: "E-commerce",
     desc: "Full e-commerce store for IT hardware & gaming gear.",
-    stack: ["WordPress", "WooCommerce"],
+    
     url: "https://ucgs.ma",
     img: ucgs, locked: false,
   },
@@ -32,7 +31,6 @@ const projects = [
     title: "UITS Portail Éducatif",
     tag: "EdTech Portal",
     desc: "Student / consultant / manager portal: courses, payments, registration, chat.",
-    stack: ["Laravel", "React", "WebSockets"],
     url: "https://uits-portail.ma",
     img: portail, locked: true,
   },
@@ -40,23 +38,20 @@ const projects = [
     title: "UITS Administration",
     tag: "Admin ERP",
     desc: "ERP suite — invoicing, quotes, BL/BC, attestations, stock, P&L tracking.",
-    stack: ["Laravel", "Vue", "MySQL"],
-    url: "https://uits-administration.ma",
+    url: "https://uits-admin.ma",
     img: admin, locked: true,
   },
   {
     title: "UITS Pro — Vitrine",
     tag: "Corporate site",
     desc: "Showcase site for Union IT Services with services, portfolio & contact.",
-    stack: ["WordPress", "Custom Theme"],
     url: "https://uits-pro.com",
     img: pro, locked: false,
   },
   {
     title: "Access Morocco",
-    tag: "SaaS · ERP",
+    tag: " ERP.CRM",
     desc: "Modern ERP-style web platform deployed on Vercel.",
-    stack: ["React", "Node.js", "Vercel"],
     url: "https://access-morocco.vercel.app",
     img: access, locked: false,
   },
@@ -64,7 +59,6 @@ const projects = [
     title: "ICAM-BAT",
     tag: "Conference · EdTech",
     desc: "International Conference on Advanced Materials & Batteries — Ben M'sik · UM6P.",
-    stack: ["WordPress", "Custom Theme", "PHP"],
     url: "https://icam-bat.com",
     img: icamBat, locked: false,
   },
@@ -72,7 +66,6 @@ const projects = [
     title: "Vision360",
     tag: "Optical Store",
     desc: "Elegant WordPress storefront for an optical brand — frames, lenses & booking.",
-    stack: ["WordPress", "WooCommerce", "Elementor"],
     url: "https://vision360online.com",
     img: vision360, locked: false,
   },
@@ -80,7 +73,6 @@ const projects = [
     title: "Faceup",
     tag: "Beauty · E-commerce",
     desc: "Premium Shopify storefront for a cosmetics brand — luxury beauty experience.",
-    stack: ["Shopify", "Liquid", "JS"],
     url: "https://faceup.store",
     img: faceup, locked: false,
   },
@@ -130,11 +122,7 @@ export function Projects() {
                 </div>
                 <p className="text-sm text-muted-foreground">{p.desc}</p>
                 <div className="mt-4 flex flex-wrap gap-1.5">
-                  {p.stack.map((s) => (
-                    <span key={s} className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-medium text-primary">
-                      {s}
-                    </span>
-                  ))}
+                 
                 </div>
               </div>
             </motion.a>
