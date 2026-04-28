@@ -1,22 +1,25 @@
 import { motion } from "framer-motion";
 import {
   Atom, Container, Database, Layers, Server, Cloud,
-  Code2, GitBranch, Palette,
+  Code2, GitBranch, Palette, Globe, ShoppingBag, Cpu,
 } from "lucide-react";
 
 const skills = [
   { name: "Laravel", desc: "PHP framework — ERP & APIs", icon: Layers, accent: "from-rose-500 to-orange-500", size: "lg" },
   { name: "ReactJS", desc: "Modern reactive UIs", icon: Atom, accent: "from-cyan-500 to-blue-500", size: "md" },
-  { name: "Node.js", desc: "Express · REST APIs", icon: Server, accent: "from-emerald-500 to-teal-500", size: "md" },
+  { name: ".NET", desc: "C# · Enterprise apps", icon: Cpu, accent: "from-violet-500 to-purple-600", size: "md" },
+  { name: "WordPress", desc: "CMS · Custom themes & plugins", icon: Globe, accent: "from-sky-400 to-blue-500", size: "md" },
+  { name: "Shopify", desc: "E-commerce storefronts", icon: ShoppingBag, accent: "from-emerald-400 to-green-600", size: "md" },
+  { name: "Node.js", desc: "Express · REST APIs", icon: Server, accent: "from-emerald-500 to-teal-500", size: "sm" },
   { name: "PHP", desc: "Backend mastery", icon: Code2, accent: "from-indigo-500 to-violet-500", size: "sm" },
   { name: "Docker", desc: "Containerized deploys", icon: Container, accent: "from-sky-500 to-blue-600", size: "sm" },
-  { name: "AWS", desc: "Cloud infrastructure", icon: Cloud, accent: "from-amber-500 to-orange-600", size: "md" },
+  { name: "AWS · Azure", desc: "Cloud infrastructure", icon: Cloud, accent: "from-amber-500 to-orange-600", size: "sm" },
   { name: "MySQL · MongoDB", desc: "SQL + NoSQL", icon: Database, accent: "from-blue-500 to-indigo-600", size: "sm" },
   { name: "Git · GitHub", desc: "Version control", icon: GitBranch, accent: "from-zinc-500 to-zinc-700", size: "sm" },
   { name: "Figma · UI/UX", desc: "Pixel-perfect design", icon: Palette, accent: "from-fuchsia-500 to-pink-500", size: "sm" },
 ];
 
-const sizeMap: Record<string, string> = {
+const sizeMap = {
   lg: "md:col-span-2 md:row-span-2",
   md: "md:col-span-1 md:row-span-1",
   sm: "md:col-span-1 md:row-span-1",
@@ -60,7 +63,7 @@ export function Skills() {
 
 export function SectionHeader({
   eyebrow, title, highlight,
-}: { eyebrow: string; title: string; highlight: string }) {
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

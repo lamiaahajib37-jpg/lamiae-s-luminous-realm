@@ -89,7 +89,7 @@ export function Contact() {
 
         <footer className="mt-20 flex flex-col items-center justify-between gap-3 border-t border-border pt-8 text-xs text-muted-foreground sm:flex-row">
           <div>© {new Date().getFullYear()} Lamiae Hajib — Crafted with passion.</div>
-          <div>Built with React · Three.js · Framer Motion</div>
+          
         </footer>
       </div>
     </section>

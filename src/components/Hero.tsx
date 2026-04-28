@@ -29,14 +29,24 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
         <div>
+          {/* ── BADGE ── */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="glass mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium"
+            className="mb-6 flex flex-wrap items-center gap-2"
           >
-            <Sparkles className="h-3.5 w-3.5 text-primary" />
-            <span>Available for freelance — Remote / Casablanca</span>
+            <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium">
+              <Sparkles className="h-3.5 w-3.5 text-primary" />
+              Available for freelance projects
+            </span>
+            <span className="glass inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium text-muted-foreground">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              </span>
+              Remote · Casablanca
+            </span>
           </motion.div>
 
           <motion.h1
@@ -49,15 +59,18 @@ export function Hero() {
             <span className="gradient-text neon-text block">Hajib.</span>
           </motion.h1>
 
+          {/* ── DESCRIPTION ── */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-6 max-w-xl text-lg text-muted-foreground sm:text-xl"
           >
-            Lead IT Developer & Full-Stack Architect. 2+ years crafting ERPs,
-            educational portals and e-commerce experiences with{" "}
-            <span className="font-semibold text-foreground">Laravel, React & Node.js</span>.
+            Full-Stack Developer & Lead IT with 2+ years of experience. I build{" "}
+            <span className="font-semibold text-foreground">WordPress & Shopify sites</span>,{" "}
+            <span className="font-semibold text-foreground">custom ERPs</span> and{" "}
+            <span className="font-semibold text-foreground">full-stack web apps</span>{" "}
+            — from idea to deployment.
           </motion.p>
 
           <motion.div
@@ -104,9 +117,9 @@ export function Hero() {
             className="mt-12 grid max-w-lg grid-cols-3 gap-3"
           >
             {[
-              { v: "2+", l: "Years" },
-              { v: "15+", l: "Projects" },
-              { v: "6+", l: "Stack" },
+              { v: "2+", l: "Years exp." },
+              { v: "15+", l: "Projects delivered" },
+              { v: "6+", l: "Technologies" },
             ].map((s) => (
               <div key={s.l} className="glass rounded-2xl px-4 py-3 text-center">
                 <div className="gradient-text text-2xl font-bold">{s.v}</div>
